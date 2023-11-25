@@ -20,19 +20,19 @@ body {
     min-height: 100vh;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 150px repeat(9, auto);
     grid-template-areas:
-        "cabecalho cabecalho"
-        "firstPaneLeft firstPaneLeft"
-        "secondPaneLeft secondPaneLeft"
-        "latestPane latestPane"
-        "approachPane approachPane"
-        "partnersPane partnersPane"
-        "proofPane proofPane"
-        "awardsPaneLeft awardsPaneLeft"
-        "reviewsPane reviewsPane"
-        "rodape rodape";
+        "cabecalho cabecalho cabecalho cabecalho"
+        "firstPaneLeft firstPaneLeft firstPaneRight firstPaneRight"
+        "secondPaneLeft secondPaneLeft secondPaneRight secondPaneRight"
+        "latestPane latestPane latestPane latestPane"
+        "approachPane approachPane approachPane approachPane"
+        "partnersPane partnersPane partnersPane partnersPane"
+        "proofPane proofPane proofPane proofPane"
+        "awardsPaneLeft awardsPaneLeft awardsPaneRight awardsPaneRight"
+        "reviewsPane reviewsPane reviewsPane reviewsPane"
+        "rodape rodape rodape rodape";
 }
 
 /* Estilo do cabeçalho */
@@ -47,15 +47,6 @@ header {
     border-bottom: none;
 }
 
-/* Adicionando uma linha horizontal após o cabeçalho */
-header::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 97%;
-    height: 1px;
-    background-color: black;
-}
 
 /* Estilo da primeira área à esquerda */
 #firstPaneLeft {
