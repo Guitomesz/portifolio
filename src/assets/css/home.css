@@ -603,7 +603,7 @@ header::after {
 .cards a {
     text-decoration: none;
     color: white;
-    position: static;
+    position: sticky;
 }
 
 #card2 h5,
