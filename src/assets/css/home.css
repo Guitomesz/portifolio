@@ -35,6 +35,8 @@ body {
         "rodape rodape rodape rodape";
 }
 
+
+
 /* Estilo do cabeçalho */
 header {
     grid-area: cabecalho;
@@ -787,7 +789,7 @@ footer {
         align-items: center;
     }
 
-    #toggleSidebarButtonSmartphone {
+    #mySidenavBtn {
         display: block;
         background-color: var(--primary-color);
         color: white;
