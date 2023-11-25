@@ -760,12 +760,8 @@ footer {
 
     /* Estilo da classe main */
     .main {
-        width: 100%;
-        min-height: 100vh;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        /* Uma coluna para telas menores */
         grid-template-areas:
             "cabecalho"
             "firstPaneLeft"
@@ -782,44 +778,36 @@ footer {
             "rodape";
     }
 
-    /* Estilo da área de avaliações (reviews) */
-    #reviewsPane {
-        margin: 0;
-        /* Remova a margem para ocupar toda a largura */
+    /* Estilo do cabeçalho para telas menores */
+    header {
+        flex-direction: column;
+        align-items: center;
     }
 
-    #bottomFooter button {
-        width: 100%;
-        /* Ou outra largura adequada */
+    /* Ajustes adicionais conforme necessário */
+}
+
+@media (max-width: 430px) and (max-height: 932px) {
+    /* Adapte o estilo para dispositivos com largura de 430px e altura de 932px */
+
+    /* Ajuste o estilo conforme necessário para uma exibição de uma coluna */
+    .main {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "cabecalho"
+            "firstPaneLeft"
+            "firstPaneRight"
+            "secondPaneLeft"
+            "secondPaneRight"
+            "latestPane"
+            "approachPane"
+            "partnersPane"
+            "proofPane"
+            "awardsPaneLeft"
+            "awardsPaneRight"
+            "reviewsPane"
+            "rodape";
     }
 
-    /* Adaptação para telas menores */
-    @media (max-width: 768px) {
-        .main {
-            grid-template-columns: 1fr;
-            /* Uma coluna para telas menores */
-            grid-template-areas:
-                "cabecalho"
-                "firstPaneLeft"
-                "firstPaneRight"
-                "secondPaneLeft"
-                "secondPaneRight"
-                "latestPane"
-                "approachPane"
-                "partnersPane"
-                "proofPane"
-                "awardsPaneLeft"
-                "awardsPaneRight"
-                "reviewsPane"
-                "rodape";
-        }
-
-        /* Estilo do cabeçalho para telas menores */
-        header {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        /* Ajustes adicionais conforme necessário */
-    }
+    /* Ajustes adicionais conforme necessário */
 }
