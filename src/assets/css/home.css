@@ -280,7 +280,7 @@ header {
     font-family: 'Montserrat', sans-serif;
 }
 
-#approachPane>div>h2 {
+#approachPane div h2 {
     text-align: left;
 }
 
@@ -338,7 +338,7 @@ header {
     gap: 1rem;
 }
 
-#partnersPane>hr {
+#partnersPane hr {
     border: 1px solid black;
     width: 90%;
 }
@@ -761,11 +761,12 @@ footer {
 /* Para smartphones */
 /* Adicione media queries para tornar o layout responsivo */
 
+//* Adicione media queries para tornar o layout responsivo */
+
 /* Para smartphones */
 @media only screen and (max-width: 480px) {
     main {
         grid-template-rows: auto;
-        /* Remova a altura fixa e deixe que o conteúdo determine a altura */
         grid-template-areas:
             "firstPane"
             "secondPane"
@@ -778,113 +779,79 @@ footer {
             "rodape";
     }
 
-    /* Esconda o cabeçalho */
     header {
         display: none;
     }
 
-    /* Ajustes para a primeira área à esquerda */
     #firstPane {
         flex-direction: column;
-        /* Empilha os itens verticalmente */
-    }
-
-    #firstPaneLeft {
         text-align: center;
-        /* Centraliza o texto */
     }
 
     #firstPane h1 {
         font-size: 40px;
-        /* Reduz o tamanho da fonte */
     }
 
     #firstPane p {
         font-size: 1.2rem;
-        /* Reduz o tamanho da fonte */
     }
 
     #firstPane button {
         width: 100%;
-        /* Ocupa a largura total */
     }
 
-    /* Ajustes para a segunda área à esquerda */
     #secondPane {
         flex-direction: column;
-        /* Empilha os itens verticalmente */
         max-width: 100%;
-        /* Usa a largura total disponível */
     }
 
-    /* Ajustes para a área "latest" */
     #latestPane {
         padding: 2em;
-        /* Reduz o espaçamento interno */
     }
 
-    /* Ajustes para a área "approach" */
     #approachPane {
         padding: 1em;
-        /* Reduz o espaçamento interno */
     }
 
-    /* Ajustes para a área "partners" */
     #partnersPane {
         gap: 0.5rem;
-        /* Reduz o espaçamento entre os parceiros */
     }
 
-    /* Ajustes para a área de comprovação (proof) */
     #proofPane {
         height: 300px;
-        /* Reduz a altura */
     }
 
     #proofPane h1 {
         font-size: 1.5em;
-        /* Reduz o tamanho da fonte */
     }
 
-    /* Ajustes para a área "awards" */
     #awardsPane {
         flex-direction: column;
-        /* Empilha os itens verticalmente */
         gap: 1rem;
-        /* Reduz o espaçamento entre os elementos */
     }
 
-    /* Ajustes para a área de avaliações (reviews) */
     #reviewsPane {
         margin: 2em 0;
-        /* Adiciona margens superior e inferior */
     }
 
-    /* Ajustes para o rodapé (footer) */
     footer {
         padding: 1em;
-        /* Reduz o espaçamento interno */
     }
 
     #topFooter {
         flex-direction: column;
-        /* Empilha os itens verticalmente */
         align-items: center;
-        /* Centraliza os itens */
     }
 
     #leftFoot,
     #middleFoot,
     #rightFoot {
         text-align: center;
-        /* Centraliza o texto */
     }
 
     #bottomFooter {
         flex-direction: column;
-        /* Empilha os itens verticalmente */
         align-items: center;
-        /* Centraliza os itens */
     }
 }
 
