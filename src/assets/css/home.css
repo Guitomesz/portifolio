@@ -603,7 +603,7 @@ header::after {
 .cards a {
     text-decoration: none;
     color: white;
-    z-index: 1;
+    z-index: 2;
 }
 
 #card2 h5,
