@@ -729,11 +729,12 @@ footer {
     justify-content: space-between;
     align-items: center;
     margin-top: 2em;
+    flex-wrap: wrap;
+    /* Adicionado para quebrar para a próxima linha se necessário */
 }
 
-#bottomFooter img {
-    width: 50px;
-    /* Ajuste conforme necessário */
+#bottomFooter button {
+    margin-bottom: 0.5em;
 }
 
 
@@ -787,6 +788,11 @@ footer {
     #reviewsPane {
         margin: 0;
         /* Remova a margem para ocupar toda a largura */
+    }
+
+    #bottomFooter button {
+        width: 100%;
+        /* Ou outra largura adequada */
     }
 
     /* Adaptação para telas menores */
