@@ -765,6 +765,7 @@ footer {
         grid-template-columns: 1fr;
         /* Uma coluna para telas menores */
         grid-template-areas:
+            "cabecalho"
             "firstPaneLeft"
             "firstPaneRight"
             "secondPaneLeft"
