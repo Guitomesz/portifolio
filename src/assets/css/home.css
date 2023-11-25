@@ -571,7 +571,6 @@ header::after {
     justify-content: flex-end;
     color: white;
     background-image: url(../../../../portifolio/src/assets/images/perfilWhats.jpg);
-    background-size: 393px 525px;
 }
 
 #card2::before {
