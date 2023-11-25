@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--  css  -->
+    <link rel="stylesheet" type="text/css" href="/src/assets/css/home.css" media="screen" />
+    <link rel='stylesheet' type='text/css' media='screen' href='/src/assets/css/sidebar.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/src/assets/css/navbar.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/src/assets/css/carousel.css'>
+
+    <!--  icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap">
+
+    <!--  window icon  -->
+    <link rel="shortcut icon" type="image/png" href="/src/assets/images/Vector1DesenhoBonito.png">
+
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="main">
+        <div id="overlay"></div>
+        <header>
+            <div id="mySidenav" class="sidenav">
+                <a class="active" href="#">HOME</a>
+                <a href="./portifolio.html">PORTFOLIO</a>
+                <a href="./blog.html">BLOG</a>
+                <a href="./photos.html">PHOTOS</a>
+            </div>
+            <div id="mySidenavBtn">
+                <span onclick="toggleNav()">&#9776;</span>
+            </div>
+            <div class="topnav">
+                <a class="active" href="#">HOME</a>
+                <a href="./portifolio.html">PORTFOLIO</a>
+                <a href="./blog.html">BLOG</a>
+                <a href="./photos.html">PHOTOS</a>
+            </div>
+            <div class="search-container">
+                <form action="/action_page.php">
+                    <input type="text" placeholder="Search..." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </header>
+        <section id="firstPaneLeft">
+            <h1><b>Guitomesz</b></h1>
+            <h2>CONSTRUINDO<br>COISAS</h2>
+            <h3>Talvez um bom design</h3>
+            <hr>
+            <h4>Fazendo fuleragens aqui e ali
+                <br>
+                <br>
+                <button>
+                    <a href="#home">Saiba Mais</a>
+                </button>
+            </h4>
+        </section>
+        <section id="firstPaneRight">
+            <img id="imagemGrande" src="./src/assets/images/Vector1DesenhoBonito.png" alt="">
+        </section>
+        <section id="secondPaneLeft">
+            <div>
+                <h2>Meus<br>Serviços</h2>
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, assumenda! Commodi possimus porro,
+                    quisquam quas laboriosam rem odit odio voluptates incidunt ex fugit est qui ducimus beatae molestiae
+                    architecto ab.</h4>
+            </div>
+        </section>
+        <section id="secondPaneRight">
+            <div id="servicesContainer">
+                <br>
+                <hr>
+                <div class="servicesContent">
+                    <i class="fa fa-trophy" aria-hidden="true"></i>
+                    <h4>BRAND CONSULTANT</h4>
+                    <p>Troféu ali.</p>
+                    <button>></button>
+                </div>
+                <hr>
+                <div class="servicesContent">
+                    <i class="fa fa-window-maximize" aria-hidden="true"></i>
+                    <h4>UI/UX SOLUTION</h4>
+                    <p>Interface né.</p>
+                    <button>></button>
+                </div>
+                <hr>
+                <div class="servicesContent">
+                    <i class="fa fa-cube" aria-hidden="true"></i>
+                    <h4>PACKAGING</h4>
+                    <p>Cubinho.</p>
+                    <button>></button>
+                </div>
+                <hr>
+                <div class="servicesContent">
+                    <i class="fa fa-video-camera" aria-hidden="true"></i>
+                    <h4>MOTION VIDEO& TVC</h4>
+                    <p>Videozin né.</p>
+                    <button>></button>
+                </div>
+                <hr>
+            </div>
+        </section>
+        <section id="latestPane">
+            <div id="latestControl">
+                <div id="latestLinksControl">
+                    <h2>Últimos Trabalhos</h2>
+                    <h4>TODOS PROJETOS <button>></button></h4>
+                </div>
+                <div id="latestBtns">
+                    <button id="prevBtn">
+                        < </button>
+                            <button id="nextBtn">
+                                >
+                            </button>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="gallery">
+                    <div class="slide" id="slide1">
+                        <figure>
+                            <img class="gallery__img" id="image-1"
+                                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/kenan-sulayman-FV3M7igu8Fs-unsplash.jpg"
+                                alt="Mountain" />
+                            <figcaption>
+                                <p>Natureza, ambiente, vida</p>
+                                <h2>Montanhas</h2>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="slide" id="slide2">
+                        <figure>
+                            <img class="gallery__img" id="image-2"
+                                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/anastasia-dulgier-NCFTGtjY3EQ-unsplash.jpg"
+                                alt="Houses" />
+                            <figcaption>
+                                <p>Harmonia, paz, serenidade</p>
+                                <h2>Cidade</h2>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="slide" id="slide3">
+                        <figure>
+                            <img class="gallery__img" id="image-3"
+                                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/arnaud-mariat-IPXcUYHeErc-unsplash.jpg"
+                                alt="Galaxies" />
+                            <figcaption>
+                                <p>Liberdade, sonhos, conquistas</p>
+                                <h2>Galáxia</h2>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="slide" id="slide4">
+                        <figure>
+                            <img class="gallery__img" id="image-4"
+                                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/matthew-smith-9CV6WrxxdrM-unsplash.jpg"
+                                alt="Motel" />
+                            <figcaption>
+                                <p>Edificação, comércio, pousadas</p>
+                                <h2>Motel</h2>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="slide" id="slide5">
+                        <figure>
+                            <img class="gallery__img" id="image-5"
+                                src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/14179/vladimir-kondriianenko-bxwzcFy9YwM-unsplash.jpg"
+                                alt="Stairs" />
+                            <figcaption>
+                                <p>Nivelamento, alturas, subidas</p>
+                                <h2>Escadas</h2>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="approachPane">
+            <div id="approachesContainer">
+                <h2>Our Approach</h2>
+                <div id="approachesTop">
+                    <div class="approachesItem">
+                        <hr>
+                        <h5>Um</h5>
+                        <h4>Pesquisa</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit cras tempus. Libero ligula, vitae accumsan tortor
+                            varius nec. Ut luctus maximus dolor.</p>
+                        <hr>
+                    </div>
+                    <div class="approachesItem">
+                        <hr>
+                        <h5>Dois</h5>
+                        <h4>Conceito</h4>
+                        <p>Donec venenatis consequat libero, quis auctor
+                            nunc volutpat quis. Proin at ipsum id magna dapibus
+                            dictum eget lobortis magna. Fusce et ligula non
+                            tellus vulputate condimentum.</p>
+                        <hr>
+                    </div>
+                    <div class="approachesItem">
+                        <hr>
+                        <h5>Três</h5>
+                        <h4>Desenvolvimento</h4>
+                        <p>Vivamus vel sollicitudin sem, id sagittis justo.
+                            Nam non magna eleifend, tempus nisl quis, commod
+                            diam. Morbi gravida ut nulla non porttitor.</p>
+                        <hr>
+                    </div>
+                </div>
+                <div id="approachesBottom">
+                    <div class="approachesItem">
+                        <hr>
+                        <h5>Quatro</h5>
+                        <h4>Teste</h4>
+                        <p>Suspendisse vel magna vitae nunc consequat
+                            eleifend. Aenean iaculis est eget turpis lacinia egest
+                            dictum ipsum sollicitudin</p>
+                        <hr>
+                    </div>
+                    <div class="approachesItem">
+                        <hr>
+                        <h5>Cinco</h5>
+                        <h4>Entrega</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit cras tempus. Libero ligula, vitae accumsan tortor
+                            varius nec.</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="partnersPane">
+            <h2>Parceiros</h2>
+            <div class="partnersLinks">
+                <button>
+                    <i class="fa fa-facebook-official" id="facebook" aria-hidden="true"></i>
+                </button>
+                <button>
+                    <i class="fa fa-whatsapp" id="whatsapp" aria-hidden="true"></i>
+                </button>
+                <button>
+                    <i class="fa fa-instagram" id="instagram" aria-hidden="true"></i>
+                </button>
+                <button>
+                    <i class="fa fa-spotify" id="spotify" aria-hidden="true"></i>
+                </button>
+                <button>
+                    <i class="fa fa-google" id="google" aria-hidden="true"></i>
+                </button>
+            </div>
+            <hr>
+            <div id="infoPartners">
+                <h2>12 anos de experiência</h2>
+                <h2>820 clientes satisfeitos</h2>
+                <h2>643 colaborados ao redor do mundo</h2>
+                <h2>1.875 projetos concluidos em 60+ paises</h2>
+            </div>
+        </section>
+        <section id="proofPane">
+            <div id="proofContainer">
+                <h1>"Sei lá cara, esse site ta bem bom. <br>
+                    O maluco me ajudou bastante e tá legal demais."</h1>
+            </div>
+        </section>
+        <section id="awardsPaneLeft">
+            <div>
+                <h2>Nossos prêmios</h2>
+            </div>
+        </section>
+        <section id="awardsPaneRight">
+            <div id="awardsContentContainer">
+                <br>
+                <hr>
+                <div class="awardsContent">
+                    <div class="awardTitle">
+                        <h6>2023 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-star" aria-hidden="true"></i>
+                        </h6>
+                    </div>
+                    <div class="awardContainer">
+                        <div class="award">
+                            <h4>Ganhei alguma coisa esse ano.<p>É verdade</p>
+                            </h4>
+                            <a href="">Saiba mais</a>
+                        </div>
+                        <div class="award">
+                            <h4>Ganhei alguma coisa esse ano.<p>É verdade</p>
+                            </h4>
+                            <a href="">Saiba mais</a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="awardsContent">
+                    <div class="awardTitle">
+                        <h6>2022 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-star" aria-hidden="true"></i>
+                        </h6>
+                    </div>
+                    <div class="awardContainer">
+                        <div class="award">
+                            <h4>Ganhei alguma coisa esse ano.<p>É verdade</p>
+                            </h4>
+                            <a href="">Saiba mais</a>
+                        </div>
+                        <div class="award">
+                            <h4>Ganhei alguma coisa esse ano.<p>É verdade</p>
+                            </h4>
+                            <a href="">Saiba mais</a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="awardsContent">
+                    <div class="awardTitle">
+                        <h6>2021 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-star" aria-hidden="true"></i>
+                        </h6>
+                    </div>
+                    <div class="awardContainer">
+                        <div class="award">
+                            <h4>Ganhei alguma coisa esse ano.<p>É verdade</p>
+                            </h4>
+                            <a href="">Saiba mais</a>
+                        </div>
+                        <div class="award">
+                            <h4>Ganhei alguma coisa esse ano.<p>É verdade</p>
+                            </h4>
+                            <a href="">Saiba mais</a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="awardsContent">
+                    <div class="awardTitle">
+                        <h6>2020 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-star" aria-hidden="true"></i>
+                        </h6>
+                    </div>
+                    <div class="awardContainer">
+                        <div class="award">
+                            <h4>Ganhei alguma coisa esse ano.<p>É verdade</p>
+                            </h4>
+                            <a href="">Saiba mais</a>
+                        </div>
+                        <div class="award">
+                            <h4>Ganhei alguma coisa esse ano.<p>É verdade</p>
+                            </h4>
+                            <a href="">Saiba mais</a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </section>
+        <section id="reviewsPane">
+            <hr>
+            <div class="reviewCards">
+                <div id="card1">
+                    <h5>PRODUCT / NOV 18,2023</h5>
+                    <h2>Review product BWIB</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <a href="">CONTINUE</a>
+                </div>
+                <div id="card2">
+                    <h5>INSPIRATION / NOV 18,2023</h5>
+                    <h2>Site inspiration with swiss style</h2>
+                </div>
+                <div id="card3">
+                    <h5>ISPIRATION / NOV 18,2023</h5>
+                    <h2>Minimalist Trends</h2>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div id="topFooter">
+                <div id="leftFoot">
+                    <h4>Boost Your Business Up To High Level</h4>
+                    <h3>Start by <a href="">Saying Hi!</a></h3>
+                </div>
+                <div id="middleFoot">
+                    <ul>
+                        <h4>Links</h4>
+                        <li><a href="">FAQS</a></li>
+                        <li><a href="">TERM & CONDITIONS</a></li>
+                        <li><a href="">PRIVACY POLICY</a></li>
+                        <li><a href="">HELP</a></li>
+                        <li><a href="">AFFILIATE</a></li>
+                        <li><a href="">SERVICES</a></li>
+                    </ul>
+                </div>
+                <div id="rightFoot">
+                    <ul>
+                        <h4>Contact</h4>
+                        <address>90 Fairground Rd, FL 3290, United States</address>
+                        <h3>hello@guitomesz.com</h3>
+                        <li><a href="">works</a></li>
+                        <li><a href="">about</a></li>
+                        <li><a href="">news</a></li>
+                        <li><a href="">contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="bottomFooter">
+                <a href=""><img src="./src/assets/images/Vector1DesenhoBonito.png" alt=""></a>
+                <h6>&copy; Guitomesz. All rights reserved</h6>
+                <div class="partnersLinks">
+                    <button>
+                        <i class="fa fa-facebook-official" id="facebook" aria-hidden="true"></i>
+                    </button>
+                    <button>
+                        <i class="fa fa-instagram" id="instagram" aria-hidden="true"></i>
+                    </button>
+                    <button>
+                        <i class="fa fa-whatsapp" id="whatsapp" aria-hidden="true"></i>
+                    </button>
+                    <button>
+                        <i class="fa fa-spotify" id="spotify" aria-hidden="true"></i>
+                    </button>
+                    <button>
+                        <i class="fa fa-github" id="github" aria-hidden="true"></i>
+                    </button>
+                </div>
+        </footer>
+    </div>
+
+    <script src="./src/javascript/sidebar.js"></script>
+    <script src="./src/javascript/carousel.js"></script>
+</body>
+
+</html>

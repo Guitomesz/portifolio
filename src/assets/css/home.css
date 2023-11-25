@@ -1,0 +1,752 @@
+/* Definindo variáveis globais */
+:root {
+    --primary-color: rgb(250, 71, 41, 1);
+    --footer-background: #333;
+    --footer-text: white;
+    --footer-link: #fc6a5a;
+}
+
+/* Estilo global do body */
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Estilo da classe main */
+.main {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 150px repeat(9, auto);
+    grid-template-areas:
+        "cabecalho cabecalho cabecalho cabecalho"
+        "firstPaneLeft firstPaneLeft firstPaneRight firstPaneRight"
+        "secondPaneLeft secondPaneLeft secondPaneRight secondPaneRight"
+        "latestPane latestPane latestPane latestPane"
+        "approachPane approachPane approachPane approachPane"
+        "partnersPane partnersPane partnersPane partnersPane"
+        "proofPane proofPane proofPane proofPane"
+        "awardsPaneLeft awardsPaneLeft awardsPaneRight awardsPaneRight"
+        "reviewsPane reviewsPane reviewsPane reviewsPane"
+        "rodape rodape rodape rodape";
+}
+
+/* Estilo do cabeçalho */
+header {
+    grid-area: cabecalho;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    border-bottom: none;
+}
+
+/* Adicionando uma linha horizontal após o cabeçalho */
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80rem;
+    height: 1px;
+    background-color: black;
+}
+
+/* Estilo da primeira área à esquerda */
+#firstPaneLeft {
+    grid-area: firstPaneLeft;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 1rem;
+    color: white;
+}
+
+/* Estilo dos elementos dentro de #firstPaneLeft */
+#firstPaneLeft h1 {
+    font-size: 60px;
+    color: black;
+    margin: 0;
+}
+
+#firstPaneLeft h2,
+#firstPaneLeft h3 {
+    color: white;
+}
+
+#firstPaneLeft p {
+    font-size: 1.5rem;
+    color: black;
+    margin: 0;
+}
+
+#firstPaneLeft hr {
+    width: 70%;
+    border: 1px solid black;
+    margin: 0;
+}
+
+#firstPaneLeft button {
+    border: none;
+    background-color: #de3c23;
+    width: 120px;
+    height: 40px;
+    transition: transform 0.3s ease;
+    /* Adiciona uma transição de 0.3 segundos no efeito de transformação */
+}
+
+
+#firstPaneLeft button:hover {
+    transform: scale(1.1);
+    /* Ao passar o mouse, aumenta a escala para 1.1 */
+    background-color: #fc6a5a;
+    cursor: pointer;
+}
+
+#firstPaneLeft a {
+    text-decoration: none;
+    color: white;
+}
+
+#imagemGrande {
+    width: 150px;
+    margin: auto;
+}
+
+/* Estilo da primeira área à direita */
+#firstPaneRight {
+    grid-area: firstPaneRight;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    color: white;
+    background-color: var(--primary-color);
+}
+
+
+#firstPaneRight>div {
+    margin: auto;
+}
+
+/* Estilo da segunda área à esquerda */
+#secondPaneLeft {
+    grid-area: secondPaneLeft;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: white;
+    text-align: left;
+    max-width: 30%;
+    margin: 0 auto;
+}
+
+#secondPaneLeft div {
+    display: flex;
+    flex-direction: column;
+}
+
+#secondPaneLeft h2 {
+    color: black;
+    font-weight: 800;
+    font-size: 3em;
+}
+
+#secondPaneLeft h4 {
+    color: #a7a7a7;
+}
+
+
+/* Estilo da segunda área à direita */
+#secondPaneRight {
+    grid-area: secondPaneRight;
+    display: flex;
+    font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+#secondPaneRight>div {
+    margin: auto;
+    gap: 1em;
+}
+
+#secondPaneRight i {
+    color: var(--primary-color);
+    font-size: 30px;
+}
+
+/* Estilo do container de serviços */
+#servicesContainer {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+}
+
+
+#servicesContainer>hr {
+    width: 100%;
+    border: 1px solid black;
+}
+
+/* Estilo do conteúdo de serviços */
+.servicesContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    gap: 5em;
+}
+
+.servicesContent button {
+    border: none;
+    background-color: transparent;
+    font-size: 1.8em;
+    color: #4b4b4b;
+}
+
+.servicesContent button:hover {
+    color: #fc6a5a;
+}
+
+/* Estilo da área "latest" */
+#latestPane {
+    grid-area: latestPane;
+    display: flex;
+    flex-direction: column;
+    padding: 5em;
+}
+
+#latestControl {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* Adicionado para separar os elementos */
+}
+
+/* Links de controle da área "latest" */
+#latestLinksControl {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+}
+
+#latestControl button {
+    background-color: transparent;
+    color: #b3b3b3;
+    border: 1px solid #bbbbbb;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#latestControl h2 {
+    margin: 0;
+    color: black;
+    font-size: 2em;
+}
+
+#latestControl h5 {
+    cursor: pointer;
+}
+
+#latestControl button:hover {
+    background-color: rgb(246, 144, 126);
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+#latestControl button:active {
+    background-color: var(--primary-color);
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo da área "approach" */
+#approachPane {
+    grid-area: approachPane;
+    color: black;
+    justify-content: center;
+    max-width: 100%;
+    padding: 3em;
+    background-color: var(--primary-color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+#approachPane>div>h2 {
+    text-align: left;
+}
+
+#approachesContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Estilo dos itens de abordagem */
+#approaches {
+    flex-direction: column;
+}
+
+/* Estilo dos itens de abordagem */
+#approachesTop,
+#approachesBottom {
+    display: flex;
+    gap: 5em;
+}
+
+.approachesItem {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    max-width: 300px;
+}
+
+.approachesItem hr {
+    border: 1px solid black;
+    width: 100%;
+}
+
+.approachesItem h5 {
+    margin: 0;
+}
+
+.approachesItem h4 {
+    text-align: left;
+    color: white;
+}
+
+.approachesItem p {
+    margin-bottom: 1em;
+}
+
+/* Estilo da área "partners" */
+#partnersPane {
+    grid-area: partnersPane;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#partnersPane>hr {
+    border: 1px solid black;
+    width: 90%;
+}
+
+/* Links dos parceiros */
+.partnersLinks {
+    display: flex;
+    gap: 8em;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo dos ícones das redes sociais no rodapé */
+.partnersLinks i {
+    font-size: 1.5em;
+    margin-right: 0.5em;
+}
+
+/* Estilo dos links de parceiros no rodapé */
+.partnersLinks button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
+    color: #fc6a5a;
+    margin-right: 1em;
+}
+
+.partnersLinks button:hover #facebook {
+    color: #3b5998;
+    /* Cor do Facebook */
+}
+
+.partnersLinks button:hover #instagram {
+    color: #e1306c;
+    /* Cor do Instagram */
+}
+
+.partnersLinks button:hover #whatsapp {
+    color: #25D366;
+    /* Cor do WhatsApp */
+}
+
+.partnersLinks button:hover #spotify {
+    color: #1ed760;
+    /* Cor do Spotify */
+}
+
+.partnersLinks button:hover #google {
+    color: #4285F4;
+    /* Cor do Google */
+}
+
+.partnersLinks button:hover #github {
+    color: #6e5494;
+    /* Cor do GitHub */
+}
+
+#infoPartners {
+    display: flex;
+    gap: 2em;
+}
+
+/* Estilo da área de comprovação (proof) */
+#proofPane {
+    grid-area: proofPane;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/pessoas.jpg);
+    filter: grayscale(70%);
+    height: 500px;
+    width: 100%;
+
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+#proofContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* Adicionado para dar espaço ao texto */
+}
+
+#proofPane h1 {
+    color: white;
+    font-size: 2em;
+    /* Adicionado para melhor visibilidade do texto */
+}
+
+/* Estilo da área "awards" */
+#awardsPaneLeft {
+    grid-area: awardsPaneLeft;
+    padding: 5em;
+    display: flex;
+    color: black;
+    font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: white;
+    text-align: left;
+    max-width: 30%;
+    margin: 0 auto;
+}
+
+
+#awardsPaneLeft h2 {
+    color: black;
+    font-weight: 800;
+    font-size: 3em;
+}
+
+/* Estilo da área "awards" */
+#awardsPaneRight {
+    grid-area: awardsPaneRight;
+    padding: 5em;
+    display: flex;
+    font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#awardsPaneRight>div {
+    margin: auto;
+    gap: 1em;
+}
+
+#awardsPaneRight i {
+    color: var(--primary-color);
+    /*font-size: 30px;*/
+}
+
+/* Estilo do container de prêmios */
+#awardsContentContainer {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+}
+
+#awardsContentContainer>hr {
+    width: 100%;
+    border: 1px solid black;
+}
+
+/* Estilo do conteúdo de serviços */
+.awardsContent {
+    display: flex;
+    text-align: left;
+    gap: 3em;
+}
+
+.awardTitle {
+    display: flex;
+    margin: 2em;
+}
+
+.awardTitle i {
+    font-size: 40px;
+}
+
+.awardsContent h6 {
+    font-size: 18px;
+}
+
+.award {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.award p {
+    color: #959595;
+    font-size: 14px;
+}
+
+.award a {
+    color: #959595;
+    text-decoration: none;
+}
+
+.award a:hover {
+    color: #4d4d4d;
+    text-decoration: underline;
+}
+
+.awardContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo da área de avaliações (reviews) */
+#reviewsPane {
+    grid-area: reviewsPane;
+    align-self: center;
+    justify-self: center;
+    min-height: 300px;
+    margin-bottom: 5em;
+}
+
+/* Estilo dos cards de avaliação (reviewCards) */
+.reviewCards {
+    display: flex;
+    gap: 5em;
+    height: 500px;
+    width: 100%;
+}
+
+/* Estilo dos cards individuais (card1, card2, card3) */
+#card1,
+#card2,
+#card3 {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 2em;
+}
+
+#card1 {
+    background-color: #fa4729;
+    color: white;
+    justify-content: flex-start;
+}
+
+#card2 {
+    justify-content: flex-end;
+    color: white;
+    background-image: url(../images/fotoLaranjas.jpg);
+}
+
+#card2::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+#card3 {
+    justify-content: flex-end;
+    color: white;
+    background-image: url(../images/fotoMaquinaEscrever.jpg);
+}
+
+#card3::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+#card1 a {
+    text-decoration: none;
+    color: white;
+    margin-top: auto;
+}
+
+#card2 h5,
+#card2 h2,
+#card3 h5,
+#card3 h2 {
+    position: relative;
+}
+
+/* Estilo do rodapé (footer) */
+footer {
+    display: flex;
+    grid-area: rodape;
+    background-color: var(--footer-background);
+    color: var(--footer-text);
+    padding: 2em;
+    flex-direction: column;
+}
+
+
+/* Estilo da parte superior do footer */
+#topFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+
+/* Estilo do lado esquerdo do footer */
+#leftFoot {
+    max-width: 300px;
+    /* Ajuste conforme necessário */
+}
+
+/* Estilo do lado esquerdo do footer */
+#leftFoot h4 {
+    color: var(--footer-link);
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+#leftFoot h3 {
+    font-size: 1.5em;
+}
+
+#leftFoot a {
+    color: var(--footer-link);
+    text-decoration: none;
+}
+
+/* Estilo da parte do meio do footer */
+#middleFoot ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilo da parte do meio do footer */
+#middleFoot h4 {
+    color: var(--footer-link);
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+#middleFoot li {
+    margin-bottom: 0.5em;
+}
+
+#middleFoot a {
+    color: white;
+    text-decoration: none;
+}
+
+#middleFoot a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo do lado direito do footer */
+#rightFoot ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilo do lado direito do footer */
+#rightFoot h4 {
+    color: var(--footer-link);
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+#rightFoot address {
+    color: white;
+    font-size: 0.9em;
+}
+
+#rightFoot h3 {
+    font-size: 1.2em;
+    color: #fc6a5a;
+    margin-top: 0.5em;
+}
+
+/* Adicionando ícone de e-mail ao lado do link 'hello' */
+#rightFoot h3::before {
+    content: '\2709';
+    margin-right: 0.2em;
+}
+
+/* Adicionando ícone de e-mail ao lado do link 'hello' */
+#rightFoot h3::before {
+    content: '\2709';
+    /* Código Unicode para o ícone de e-mail */
+    margin-right: 0.2em;
+}
+
+
+#rightFoot li {
+    margin-bottom: 0.5em;
+}
+
+#rightFoot a {
+    color: white;
+    text-decoration: none;
+}
+
+#rightFoot a:hover {
+    text-decoration: underline;
+}
+
+
+/* Estilo da parte inferior do footer */
+#bottomFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2em;
+}
+
+#bottomFooter img {
+    width: 50px;
+    /* Ajuste conforme necessário */
+}
+
+
+/* Estilo da parte inferior do footer */
+#bottomFooter h6 {
+    color: var(--footer-link);
+    font-size: 0.8em;
+    margin: 0;
+}

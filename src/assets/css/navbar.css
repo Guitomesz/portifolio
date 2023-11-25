@@ -1,0 +1,55 @@
+.topnav {
+    overflow: hidden;
+    background-color: transparent;
+    width: 80%;
+    /* Defina a largura desejada */
+    display: flex;
+    justify-content: space-around;
+    /* Use space-around para centralizar os itens */
+    align-items: center;
+}
+
+.topnav a {
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 14px 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.topnav a:hover {
+    background-color: #5d5656;
+    color: white;
+}
+
+.topnav a.active {
+    background-color: black;
+    color: white;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type=text] {
+    padding: 8px;
+    font-size: 17px;
+    border: 1px solid #818181;
+    border-radius: 8px;
+    margin-right: 8px;
+}
+
+.search-container button {
+    padding: 8px 12px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.3s;
+}
+
+.search-container button:hover {
+    background-color: #818181;
+}

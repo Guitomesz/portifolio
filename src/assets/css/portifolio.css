@@ -1,0 +1,327 @@
+/* Definindo variáveis globais */
+:root {
+    --primary-color: rgb(250, 71, 41, 1);
+    --footer-background: #333;
+    --footer-text: white;
+    --footer-link: #fc6a5a;
+}
+
+/* Estilo global do body */
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Estilo da classe main */
+.main {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 150px repeat(9, auto);
+    grid-template-areas:
+        "cabecalho cabecalho cabecalho cabecalho"
+        "reviewsPane reviewsPane reviewsPane reviewsPane"
+        "rodape rodape rodape rodape";
+}
+
+
+/* Estilo do cabeçalho */
+header {
+    grid-area: cabecalho;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    border-bottom: none;
+}
+
+/* Adicionando uma linha horizontal após o cabeçalho */
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80rem;
+    height: 1px;
+    background-color: black;
+}
+
+/* Estilo da área de avaliações (reviews) */
+#reviewsPane {
+    grid-area: reviewsPane;
+    align-self: center;
+    justify-self: center;
+    min-height: 300px;
+    margin: 5em;
+}
+
+/* Estilo dos cards de avaliação (reviewCards) */
+.reviewCards {
+    display: flex;
+    gap: 5em;
+    height: 500px;
+    width: 100%;
+}
+
+/* Estilo dos cards individuais (card1, card2, card3) */
+#card1,
+#card2,
+#card3 {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 2em;
+}
+
+#card1 {
+    background-color: #fa4729;
+    color: white;
+    justify-content: flex-start;
+}
+
+#card2 {
+    justify-content: flex-end;
+    color: white;
+    background-image: url(../images/fotoLaranjas.jpg);
+}
+
+#card2::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+#card3 {
+    justify-content: flex-end;
+    color: white;
+    background-image: url(../images/fotoMaquinaEscrever.jpg);
+}
+
+#card3::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+#card1 a {
+    text-decoration: none;
+    color: white;
+    margin-top: auto;
+}
+
+#card2 h5,
+#card2 h2,
+#card3 h5,
+#card3 h2 {
+    position: relative;
+}
+
+/* Estilo do rodapé (footer) */
+footer {
+    display: flex;
+    grid-area: rodape;
+    background-color: var(--footer-background);
+    color: var(--footer-text);
+    padding: 2em;
+    flex-direction: column;
+}
+
+
+/* Estilo da parte superior do footer */
+#topFooter {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+
+/* Estilo do lado esquerdo do footer */
+#leftFoot {
+    max-width: 300px;
+    /* Ajuste conforme necessário */
+}
+
+/* Estilo do lado esquerdo do footer */
+#leftFoot h4 {
+    color: var(--footer-link);
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+#leftFoot h3 {
+    font-size: 1.5em;
+}
+
+#leftFoot a {
+    color: var(--footer-link);
+    text-decoration: none;
+}
+
+/* Estilo da parte do meio do footer */
+#middleFoot ul {
+    list-style: none;
+}
+
+/* Estilo da parte do meio do footer */
+#middleFoot h4 {
+    color: var(--footer-link);
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+#middleFoot li {
+    margin-bottom: 1em;
+}
+
+#middleFoot a {
+    color: white;
+    text-decoration: none;
+}
+
+#middleFoot a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo do lado direito do footer */
+#rightFoot ul {
+    list-style: none;
+}
+
+/* Estilo do lado direito do footer */
+#rightFoot h4 {
+    color: var(--footer-link);
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+#rightFoot address {
+    color: white;
+    font-size: 0.9em;
+}
+
+#rightFoot h3 {
+    font-size: 1.2em;
+    color: #fc6a5a;
+    margin-top: 0.5em;
+}
+
+/* Adicionando ícone de e-mail ao lado do link 'hello' */
+#rightFoot h3::before {
+    content: '\2709';
+    margin-right: 0.2em;
+}
+
+/* Adicionando ícone de e-mail ao lado do link 'hello' */
+#rightFoot h3::before {
+    content: '\2709';
+    /* Código Unicode para o ícone de e-mail */
+    margin-right: 0.2em;
+}
+
+
+#rightFoot li {
+    margin-bottom: 0.5em;
+}
+
+#rightFoot a {
+    color: white;
+    text-decoration: none;
+}
+
+#rightFoot a:hover {
+    text-decoration: underline;
+}
+
+
+/* Estilo da parte inferior do footer */
+#bottomFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2em;
+}
+
+#bottomFooter img {
+    width: 50px;
+    /* Ajuste conforme necessário */
+}
+
+
+/* Estilo da parte inferior do footer */
+#bottomFooter h6 {
+    color: var(--footer-link);
+    font-size: 0.8em;
+    margin: 0;
+}
+
+
+
+/* Links dos parceiros */
+.partnersLinks {
+    display: flex;
+    gap: 8em;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo dos ícones das redes sociais no rodapé */
+.partnersLinks i {
+    font-size: 1.5em;
+    margin-right: 0.5em;
+}
+
+/* Estilo dos links de parceiros no rodapé */
+.partnersLinks button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5em;
+    color: #fc6a5a;
+    margin-right: 1em;
+}
+
+.partnersLinks button:hover #facebook {
+    color: #3b5998;
+    /* Cor do Facebook */
+}
+
+.partnersLinks button:hover #instagram {
+    color: #e1306c;
+    /* Cor do Instagram */
+}
+
+.partnersLinks button:hover #whatsapp {
+    color: #25D366;
+    /* Cor do WhatsApp */
+}
+
+.partnersLinks button:hover #spotify {
+    color: #1ed760;
+    /* Cor do Spotify */
+}
+
+.partnersLinks button:hover #google {
+    color: #4285F4;
+    /* Cor do Google */
+}
+
+.partnersLinks button:hover #github {
+    color: #6e5494;
+    /* Cor do GitHub */
+}

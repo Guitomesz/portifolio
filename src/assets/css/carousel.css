@@ -1,0 +1,32 @@
+/* Estilo para a classe .wrapper */
+.wrapper {
+    overflow: hidden;
+    display: grid;
+}
+
+/* Estilo para a classe .gallery */
+.gallery {
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    display: flex;
+    width: 100%;
+    /* Garante que o carousel ocupe 100% da largura do contêiner pai */
+    justify-content: space-between;
+    /* Ajusta o espaço entre os slides */
+}
+
+
+img.gallery__img {
+    width: 100%;
+    height: 300px;
+    /* Ajuste a altura conforme necessário */
+    object-fit: cover;
+    border-radius: 8px;
+    /* Adiciona borda arredondada às imagens */
+}
+
+.slide {
+    flex: 0 0 50%;
+    box-sizing: border-box;
+}
