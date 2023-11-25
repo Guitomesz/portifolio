@@ -49,6 +49,20 @@ header {
     border-bottom: none;
 }
 
+#smartSideBtn {
+    grid-area: smartSideBtn;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 15px;
+    font-size: 30px;
+    color: black;
+    position: fixed;
+    transition: color 0.5s;
+}
 
 /* Estilo da primeira área à esquerda */
 #firstPaneLeft {
@@ -767,6 +781,7 @@ footer {
         grid-template-columns: 1fr;
         /* Uma coluna para telas menores */
         grid-template-areas:
+            "smartSideBtn"
             "firstPaneLeft"
             "firstPaneRight"
             "secondPaneLeft"
