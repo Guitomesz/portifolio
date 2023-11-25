@@ -65,5 +65,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Rode o carousel automaticamente
-    rotateCarousel();
+    //rotateCarousel();
 });
