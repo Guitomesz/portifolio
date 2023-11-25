@@ -538,8 +538,7 @@ header::after {
     align-self: center;
     justify-self: center;
     min-height: 300px;
-    margin-bottom: 5em;
-    justify-content: space-evenly;
+    margin: 5em;
 }
 
 /* Estilo dos cards de avaliação (reviewCards) */
