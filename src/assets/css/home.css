@@ -569,7 +569,7 @@ header::after {
 #card2 {
     justify-content: flex-end;
     color: white;
-    background-image: url(../images/fotoLaranjas.jpg);
+    background-image: url(../images/perfilWhats.jpg);
 }
 
 #card2::before {
