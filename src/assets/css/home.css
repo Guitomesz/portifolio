@@ -747,6 +747,8 @@ footer {
 
 /* media queries aqui */
 
+/* media queries aqui */
+
 @media (max-width: 768px) {
     /* Adapte o estilo para telas menores aqui */
 
@@ -763,7 +765,6 @@ footer {
         grid-template-columns: 1fr;
         /* Uma coluna para telas menores */
         grid-template-areas:
-            "cabecalho"
             "firstPaneLeft"
             "firstPaneRight"
             "secondPaneLeft"
@@ -780,8 +781,22 @@ footer {
 
     /* Estilo do cabeçalho para telas menores */
     header {
+        display: none;
+        /* Oculta o cabeçalho por padrão */
         flex-direction: column;
         align-items: center;
+    }
+
+    /* Estilo do botão para mostrar o cabeçalho */
+    #showHeaderButton {
+        display: block;
+        /* Exibe o botão por padrão */
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        padding: 10px;
+        margin: 10px;
+        cursor: pointer;
     }
 
     /* Ajustes adicionais conforme necessário */
