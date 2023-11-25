@@ -600,9 +600,7 @@ header::after {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
-#card1 a,
-#card2 a,
-#card3 a {
+.cards a {
     text-decoration: none;
     color: white;
 }
