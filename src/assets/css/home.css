@@ -765,6 +765,7 @@ footer {
         grid-template-columns: 1fr;
         /* Uma coluna para telas menores */
         grid-template-areas:
+            "cabecalho"
             "firstPaneLeft"
             "firstPaneRight"
             "secondPaneLeft"
@@ -777,14 +778,6 @@ footer {
             "awardsPaneRight"
             "reviewsPane"
             "rodape";
-    }
-
-    /* Estilo do cabeçalho para telas menores */
-    header {
-        display: none;
-        /* Oculta o cabeçalho por padrão */
-        flex-direction: column;
-        align-items: center;
     }
 
     /* Estilo do botão para mostrar o cabeçalho */
