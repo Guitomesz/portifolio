@@ -23,16 +23,16 @@ body {
     grid-template-columns: 50% 50%;
     grid-template-rows: 150px repeat(9, auto);
     grid-template-areas:
-        "cabecalho cabecalho cabecalho cabecalho"
-        "firstPaneLeft firstPaneLeft firstPaneRight firstPaneRight"
-        "secondPaneLeft secondPaneLeft secondPaneRight secondPaneRight"
-        "latestPane latestPane latestPane latestPane"
-        "approachPane approachPane approachPane approachPane"
-        "partnersPane partnersPane partnersPane partnersPane"
-        "proofPane proofPane proofPane proofPane"
-        "awardsPaneLeft awardsPaneLeft awardsPaneRight awardsPaneRight"
-        "reviewsPane reviewsPane reviewsPane reviewsPane"
-        "rodape rodape rodape rodape";
+        "cabecalho cabecalho"
+        "firstPaneLeft firstPaneLeft"
+        "secondPaneLeft secondPaneLeft"
+        "latestPane latestPane"
+        "approachPane approachPane"
+        "partnersPane partnersPane"
+        "proofPane proofPane"
+        "awardsPaneLeft awardsPaneLeft"
+        "reviewsPane reviewsPane"
+        "rodape rodape";
 }
 
 /* Estilo do cabeçalho */
@@ -43,7 +43,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    position: static;
+    position: relative;
     border-bottom: none;
 }
 
