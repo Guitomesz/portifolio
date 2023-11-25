@@ -17,21 +17,22 @@ body {
 /* Estilo da classe main */
 main {
     width: 100%;
+    max-width: 1500px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 150px repeat(9, auto);
     grid-template-areas:
-        "cabecalho cabecalho "
-        "firstPane firstPane "
-        "secondPane secondPane "
-        "latestPane latestPane "
-        "approachPane approachPane "
-        "partnersPane partnersPane "
-        "proofPane proofPane "
-        "awardsPane awardsPane "
-        "reviewsPane reviewsPane "
-        "rodape rodape ";
+        "cabecalho cabecalho"
+        "firstPane firstPane"
+        "secondPane secondPane"
+        "latestPane latestPane"
+        "approachPane approachPane"
+        "partnersPane partnersPane"
+        "proofPane proofPane"
+        "awardsPane awardsPane"
+        "reviewsPane reviewsPane"
+        "rodape rodape";
 }
 
 /* Adiciona um estilo básico para as seções */
@@ -52,6 +53,19 @@ header {
     padding: 1rem;
     position: relative;
     border-bottom: none;
+}
+
+#firstPane,
+#secondPane,
+#latestPane,
+#approachPane,
+#partnersPane,
+#proofPane,
+#awardsPane,
+#reviewsPane {
+    width: 100%;
+    max-width: 100%;
+    /* o restante do seu código... */
 }
 
 /* Estilo da primeira área à esquerda */
@@ -136,43 +150,46 @@ header {
 #secondPane {
     grid-area: secondPane;
     display: flex;
-    gap: 10em;
+    flex-direction: row;
     color: black;
     font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: left;
-    max-width: 70%;
+    max-width: 100%;
     margin: 0 auto;
-    /* Esta linha adicionada */
 }
+
 
 /* Estilo da segunda área à esquerda */
 #secondPaneLeft {
     display: flex;
     flex-direction: column;
+    /* Alinha os itens à esquerda */
 }
 
 #secondPaneLeft h2 {
     color: black;
     font-weight: 800;
     font-size: 5em;
+    text-align: center;
 }
 
 #secondPaneLeft h4 {
     color: #a7a7a7;
-    text-align: left;
+    text-align: center;
 }
 
 /* Estilo da segunda área à direita */
 #secondPaneRight {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    /* Alinha os itens à esquerda */
 }
 
 #secondPaneRight i {
     color: var(--primary-color);
     font-size: 30px;
 }
-
 
 #secondPaneRight hr {
     width: 100%;
@@ -182,15 +199,16 @@ header {
 /* Estilo do conteúdo de serviços */
 .servicesContent {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     text-align: left;
     gap: 5em;
+    /* ou qualquer valor desejado */
 }
-
 
 .servicesContent button {
     border: none;
+    max-width: 100%;
+    /* Garante que os botões não ultrapassem a largura do contêiner */
     background-color: transparent;
     font-size: 1.8em;
     color: #4b4b4b;
@@ -205,7 +223,6 @@ header {
     grid-area: latestPane;
     display: flex;
     flex-direction: column;
-    padding: 5em;
 }
 
 #latestControl {
@@ -258,7 +275,7 @@ header {
     color: black;
     justify-content: center;
     max-width: 100%;
-    padding: 3em;
+    padding: 3em 0 3em 0;
     background-color: var(--primary-color);
     font-family: 'Montserrat', sans-serif;
 }
@@ -329,7 +346,6 @@ header {
 /* Links dos parceiros */
 .partnersLinks {
     display: flex;
-    gap: 8em;
     justify-content: center;
     align-items: center;
 }
@@ -337,7 +353,6 @@ header {
 /* Estilo dos ícones das redes sociais no rodapé */
 .partnersLinks i {
     font-size: 1.5em;
-    margin-right: 0.5em;
 }
 
 /* Estilo dos links de parceiros no rodapé */
@@ -602,6 +617,7 @@ footer {
     grid-area: rodape;
     background-color: var(--footer-background);
     color: var(--footer-text);
+    max-width: 100%;
     padding: 2em;
     flex-direction: column;
 }
@@ -722,6 +738,8 @@ footer {
     align-items: center;
     margin-top: 2em;
     flex-wrap: wrap;
+    max-width: 100%;
+
     /* Adicionado para quebrar para a próxima linha se necessário */
 }
 
@@ -741,12 +759,14 @@ footer {
 /* Adicione media queries para tornar o layout responsivo */
 
 /* Para smartphones */
+/* Adicione media queries para tornar o layout responsivo */
+
+/* Para smartphones */
 @media only screen and (max-width: 480px) {
     main {
         grid-template-rows: auto;
         /* Remova a altura fixa e deixe que o conteúdo determine a altura */
         grid-template-areas:
-            "cabecalho"
             "firstPane"
             "secondPane"
             "latestPane"
@@ -758,10 +778,9 @@ footer {
             "rodape";
     }
 
-    /* Ajustes para o cabeçalho */
+    /* Esconda o cabeçalho */
     header {
-        flex-direction: column;
-        /* Altera para empilhar os itens verticalmente */
+        display: none;
     }
 
     /* Ajustes para a primeira área à esquerda */
@@ -866,5 +885,56 @@ footer {
         /* Empilha os itens verticalmente */
         align-items: center;
         /* Centraliza os itens */
+    }
+}
+
+/* Para tablets e dispositivos maiores */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "cabecalho"
+            "firstPane"
+            "secondPane"
+            "latestPane"
+            "approachPane"
+            "partnersPane"
+            "proofPane"
+            "awardsPane"
+            "reviewsPane"
+            "rodape";
+    }
+
+    header {
+        display: flex;
+    }
+
+    #firstPane {
+        flex-direction: row;
+    }
+
+    #secondPane {
+        flex-direction: row;
+    }
+
+    #latestPane {
+        padding: 2em;
+    }
+
+    #partnersPane {
+        gap: 1rem;
+    }
+
+    #proofPane {
+        height: 400px;
+    }
+
+    #awardsPane {
+        gap: 2em;
+    }
+
+    footer {
+        padding: 2em;
     }
 }
