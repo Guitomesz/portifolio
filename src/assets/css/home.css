@@ -741,7 +741,7 @@ footer {
 /* Adicione media queries para tornar o layout responsivo */
 
 /* Para smartphones */
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 480px) {
     main {
         grid-template-rows: auto;
         /* Remova a altura fixa e deixe que o conteúdo determine a altura */
