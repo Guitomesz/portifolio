@@ -600,16 +600,14 @@ header::after {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
-.cards a {
-    text-decoration: none;
-    color: white;
-    position: relative;
-}
-
 #card2 h5,
 #card2 h2,
+#card2 a,
 #card3 h5,
-#card3 h2 {
+#card3 h2,
+#card3 a {
+    text-decoration: none;
+    color: white;
     position: relative;
 }
 
