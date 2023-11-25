@@ -20,7 +20,7 @@ body {
     min-height: 100vh;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 150px repeat(9, auto);
     grid-template-areas:
         "cabecalho cabecalho cabecalho cabecalho"
@@ -54,7 +54,7 @@ header::after {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 80rem;
+    width: 70rem;
     height: 1px;
     background-color: black;
 }
