@@ -760,6 +760,8 @@ footer {
             "awardsPane"
             "reviewsPane"
             "rodape";
+        width: 20%;
+        max-width: 480px;
     }
 
     /* Esconda o cabeçalho */
@@ -779,7 +781,7 @@ footer {
     }
 
     #firstPane h1 {
-        font-size: 10px;
+        font-size: 50px;
         /* Reduz o tamanho da fonte */
     }
 
@@ -789,7 +791,7 @@ footer {
     }
 
     #firstPane button {
-        width: 100%;
+        width: 50%;
         /* Ocupa a largura total */
     }
 
@@ -799,6 +801,15 @@ footer {
         /* Empilha os itens verticalmente */
         max-width: 100%;
         /* Usa a largura total disponível */
+    }
+
+    #secondPaneLeft {
+        display: flex;
+        /*width: 50%;*/
+    }
+
+    #secondPaneLeft h2 {
+        font-size: 30px;
     }
 
     /* Ajustes para a área "latest" */
