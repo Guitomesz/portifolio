@@ -38,7 +38,6 @@ main {
 /* Adiciona um estilo básico para as seções */
 section {
     display: flex;
-    border: 1px solid red;
     align-items: center;
 }
 
@@ -749,7 +748,6 @@ footer {
 /* Para smartphones */
 @media only screen and (max-width: 480px) {
     main {
-        max-width: 412px;
         grid-template-rows: auto;
         /* Remova a altura fixa e deixe que o conteúdo determine a altura */
         grid-template-areas:
