@@ -23,16 +23,16 @@ main {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 150px repeat(9, auto);
     grid-template-areas:
-        "cabecalho cabecalho"
-        "firstPane firstPane"
-        "secondPane secondPane"
-        "latestPane latestPane"
-        "approachPane approachPane"
-        "partnersPane partnersPane"
-        "proofPane proofPane"
-        "awardsPane awardsPane"
-        "reviewsPane reviewsPane"
-        "rodape rodape";
+        "cabecalho"
+        "firstPane"
+        "secondPane"
+        "latestPane"
+        "approachPane"
+        "partnersPane"
+        "proofPane"
+        "awardsPane"
+        "reviewsPane"
+        "rodape";
 }
 
 /* Adiciona um estilo básico para as seções */
