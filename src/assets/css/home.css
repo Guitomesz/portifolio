@@ -422,7 +422,6 @@ header {
     gap: 10em;
     color: black;
     font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-align: left;
     margin: auto;
     align-items: flex-start;
     /* Alterado para alinhar no início */
@@ -449,7 +448,6 @@ header {
 
 #awardsPaneRight i {
     color: var(--primary-color);
-    font-size: 30px;
 }
 
 /* Estilo do container de prêmios */
@@ -489,7 +487,6 @@ header {
 .award {
     display: flex;
     flex-direction: row;
-    gap: 2em;
     align-items: center;
 }
 
@@ -520,6 +517,9 @@ header {
     justify-self: center;
     min-height: 300px;
     margin: 5em;
+    padding-bottom: 20px;
+    /* Adicione um espaçamento inferior para evitar sobreposição com o footer */
+
 }
 
 /* Estilo dos cards de avaliação (reviewCards) */
@@ -540,6 +540,8 @@ header {
     flex-direction: column;
     position: relative;
     padding: 2em;
+    width: 100%;
+    /* Alteração para ocupar a largura total */
 }
 
 #card1 {
@@ -551,7 +553,8 @@ header {
 #card2 {
     justify-content: flex-end;
     color: white;
-    background-image: url(../../../../portifolio/src/assets/images/perfilWhats.jpg);
+    /* background-image: url(../../../../portifolio/src/assets/images/perfilWhats.jpg); */
+    background-image: url(../images/perfilWhats.jpg);
 }
 
 #card2::before {
@@ -604,6 +607,8 @@ footer {
     max-width: 100%;
     padding: 2em;
     flex-direction: column;
+    width: 100%;
+    margin-top: 2em;
 }
 
 
@@ -749,7 +754,6 @@ footer {
 @media only screen and (max-width: 480px) {
     main {
         grid-template-rows: auto;
-        /* Remova a altura fixa e deixe que o conteúdo determine a altura */
         grid-template-areas:
             "firstPane"
             "secondPane"
@@ -760,8 +764,6 @@ footer {
             "awardsPane"
             "reviewsPane"
             "rodape";
-        width: 20%;
-        max-width: 480px;
     }
 
     /* Esconda o cabeçalho */
@@ -798,41 +800,80 @@ footer {
     /* Ajustes para a segunda área à esquerda */
     #secondPane {
         flex-direction: column;
-        /* Empilha os itens verticalmente */
-        max-width: 100%;
-        /* Usa a largura total disponível */
-    }
-
-    #secondPaneLeft {
-        display: flex;
-        /*width: 50%;*/
+        width: 50%;
     }
 
     #secondPaneLeft h2 {
         font-size: 30px;
     }
 
+    #secondPaneRight {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .servicesContent {
+        gap: 2em;
+        /* ou qualquer valor desejado */
+    }
+
     /* Ajustes para a área "latest" */
     #latestPane {
-        padding: 2em;
+        margin: 0 3em 0 0;
         /* Reduz o espaçamento interno */
     }
 
     /* Ajustes para a área "approach" */
     #approachPane {
-        padding: 1em;
+        padding: 0.5em;
         /* Reduz o espaçamento interno */
+        width: auto;
     }
+
+    /* Estilo dos itens de abordagem */
+    #approachesTop,
+    #approachesBottom {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .approachesItem {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        max-width: 300px;
+    }
+
+    .approachesItem hr:first-child {
+        display: none;
+    }
+
+
 
     /* Ajustes para a área "partners" */
     #partnersPane {
+        width: auto;
         gap: 0.5rem;
         /* Reduz o espaçamento entre os parceiros */
+    }
+
+    #placePartnersLinks {
+        margin-left: 1.5em;
+    }
+
+    #infoPartners {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #infoPartners h2 {
+        font-size: 16px
     }
 
     /* Ajustes para a área de comprovação (proof) */
     #proofPane {
         height: 300px;
+        width: auto;
         /* Reduz a altura */
     }
 
@@ -849,15 +890,44 @@ footer {
         /* Reduz o espaçamento entre os elementos */
     }
 
-    /* Ajustes para a área de avaliações (reviews) */
+    #awardsPaneLeft {
+        display: flex;
+        align-self: center;
+    }
+
+    #awardsPaneLeft h2 {
+        font-size: 40px;
+    }
+
+    #awardsPaneRight {
+        width: 99.5%;
+    }
+
+    .award {
+        flex-direction: column;
+    }
+
     #reviewsPane {
-        margin: 2em 0;
-        /* Adiciona margens superior e inferior */
+        width: auto;
+        /* Centraliza os cards */
+    }
+
+    .reviewCards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        /* Centraliza os cards verticalmente */
     }
 
     /* Ajustes para o rodapé (footer) */
     footer {
-        padding: 1em;
+        width: auto;
+        margin-top: 35em;
+        /* Adicione um espaçamento superior para separar o footer do conteúdo acima */
+        /* Adição de margem superior para separar o footer dos cards */
+        /* Ou ajuste conforme necessário */
+
         /* Reduz o espaçamento interno */
     }
 
