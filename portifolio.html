@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--  css  -->
-    <link rel="stylesheet" type="text/css" href="../portifolio/src/assets/css/home.css" media="screen" />
+    <!--  css site -->
+    <link rel="stylesheet" type="text/css" href="../portifolio/src/assets/css/portifolio.css" media="screen" />
     <link rel='stylesheet' type='text/css' media='screen' href='../portifolio/src/assets/css/sidebar.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='../portifolio/src/assets/css/navbar.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='../portifolio/src/assets/css/carousel.css'>
 
+    <!--  css live-server -->
+    <link rel="stylesheet" type="text/css" href="/src/assets/css/portifolio.css" media="screen" />
+    <link rel='stylesheet' type='text/css' media='screen' href='/src/assets/css/sidebar.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/src/assets/css/navbar.css'>
 
     <!--  icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -19,27 +22,27 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap">
 
     <!--  window icon  -->
-    <link rel="shortcut icon" type="image/png" href="/src/assets/images/Vector1DesenhoBonito.png">
+    <link rel="shortcut icon" type="image/png" href="../portifolio/src/assets/images/Vector1DesenhoBonito.png">
 
     <title>Home</title>
 </head>
 
 <body>
-    <div class="main">
+    <main>
         <div id="overlay"></div>
+        <div id="mySidenav" class="sidenav">
+            <a class="active" href="#">HOME</a>
+            <a href="../portifolio/portifolio.html">PORTFOLIO</a>
+            <a href="../portifolio/blog.html">BLOG</a>
+            <a href="../portifolio/photos.html">PHOTOS</a>
+        </div>
+        <div id="mySidenavBtn">
+            <span onclick="toggleNav()">&#9776;</span>
+        </div>
         <header>
-            <div id="mySidenav" class="sidenav">
-                <a href="../portifolio/index.html">HOME</a>
-                <a class="active" href="../portifolio/portifolio.html">PORTFOLIO</a>
-                <a href="../portifolio/blog.html">BLOG</a>
-                <a href="../portifolio/photos.html">PHOTOS</a>
-            </div>
-            <div id="mySidenavBtn">
-                <span onclick="toggleNav()">&#9776;</span>
-            </div>
             <div class="topnav">
-                <a href="../portifolio/index.html">HOME</a>
-                <a class="active" href="../portifolio/portifolio.html">PORTFOLIO</a>
+                <a class="active" href="#">HOME</a>
+                <a href="../portifolio/portifolio.html">PORTFOLIO</a>
                 <a href="../portifolio/blog.html">BLOG</a>
                 <a href="../portifolio/photos.html">PHOTOS</a>
             </div>
@@ -50,56 +53,51 @@
                 </form>
             </div>
         </header>
-        <section id="reviewsPane">
-            <div class="reviewCards">
-                <div id="card1" class="card">
-                    <h5>PRODUCT / NOV 18,2023</h5>
-                    <h2>Review product BWIB</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                    <a href="">CONTINUE</a>
+
+        <section id="portifolioPane">
+            <div id="portifolioContainer">
+                <div id="firstSite" class="portifolioContentContainer">
+                    <h3>Linkedin</h3><a href="https://www.linkedin.com/in/guitomesz/"></a>
                 </div>
-                <div id="card2" class="card">
-                    <h5>INSPIRATION / NOV 18,2023</h5>
-                    <h2>Site inspiration with swiss style</h2>
-                </div>
-                <div id="card3" class="card">
-                    <h5>ISPIRATION / NOV 18,2023</h5>
-                    <h2>Minimalist Trends</h2>
-                </div>
+                <div id="secondSite" class="portifolioContentContainer"><a href="">asdasdasdas</a></div>
+                <div id="thirdSite" class="portifolioContentContainer"><a href="">hfnjunititb</a></div>
+                <div id="forthSite" class="portifolioContentContainer"><a href="">dfbhvawgfwa</a></div>
             </div>
         </section>
+
         <footer>
             <div id="topFooter">
                 <div id="leftFoot">
-                    <h4>Boost Your Business Up To High Level</h4>
-                    <h3>Start by <a href="">Saying Hi!</a></h3>
+                    <h4>Alavanque o seu negócio e tenha o seu lugar nos holofotes!</h4>
+                    <h3>Comece <a href="">dando um Olá!</a></h3>
                 </div>
                 <div id="middleFoot">
                     <ul>
-                        <h4>Links</h4>
-                        <li><a href="">FAQS</a></li>
-                        <li><a href="">TERM & CONDITIONS</a></li>
-                        <li><a href="">PRIVACY POLICY</a></li>
-                        <li><a href="">HELP</a></li>
-                        <li><a href="">AFFILIATE</a></li>
-                        <li><a href="">SERVICES</a></li>
+                        <h4>Suporte</h4>
+                        <li><a href="">PERGUNTAS FREQUENTES</a></li>
+                        <li><a href="">TERMOS E CONDIÇÕES</a></li>
+                        <li><a href="">POLÍTICA DE PRIVACIDADE</a></li>
+                        <li><a href="">AJUDA</a></li>
+                        <li><a href="">TRABALHE CONOSCO</a></li>
+                        <li><a href="">SERVIÇOS</a></li>
                     </ul>
                 </div>
                 <div id="rightFoot">
                     <ul>
-                        <h4>Contact</h4>
-                        <address>90 Fairground Rd, FL 3290, United States</address>
-                        <h3>hello@guitomesz.com</h3>
-                        <li><a href="">works</a></li>
-                        <li><a href="">about</a></li>
-                        <li><a href="">news</a></li>
-                        <li><a href="">contact</a></li>
+                        <h4>Contatos</h4>
+                        <address>Rua dos bobos, nº0</address>
+                        <a href="mailto:guitomesz@outlook.com? subject=Oi, desejo saber mais do seu trabalho!">
+                            <h3>guitomesz@outlook.com</h3>
+                        </a>
+                        <li><a href="">projetos</a></li>
+                        <li><a href="">quem somos</a></li>
+                        <li><a href="">notícias</a></li>
+                        <li><a href="">fale conosco</a></li>
                     </ul>
                 </div>
             </div>
             <div id="bottomFooter">
-                <a href=""><img src="./src/assets/images/Vector1DesenhoBonito.png" alt=""></a>
-                <h6>&copy; Guitomesz. All rights reserved</h6>
+                <h6>&copy; Guitomesz. Todos os direitos reservados</h6>
                 <div class="partnersLinks">
                     <button>
                         <i class="fa fa-facebook-official" id="facebook" aria-hidden="true"></i>
@@ -117,13 +115,11 @@
                         <i class="fa fa-github" id="github" aria-hidden="true"></i>
                     </button>
                 </div>
+            </div>
         </footer>
-    </div>
+    </main>
 
     <script src="./src/javascript/sidebar.js"></script>
-    <script src="./src/javascript/carousel.js"></script>
-    <script src="./src/javascript/cards.js"></script>
-
 </body>
 
 </html>

@@ -15,18 +15,25 @@ body {
 }
 
 /* Estilo da classe main */
-.main {
+main {
     width: 100%;
-    min-height: 100vh;
+    /* max-width: 1500px; */
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 150px repeat(9, auto);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 150px repeat(3, auto);
     grid-template-areas:
-        "cabecalho cabecalho cabecalho cabecalho"
-        "reviewsPane reviewsPane reviewsPane reviewsPane"
-        "rodape rodape rodape rodape";
+        "cabecalho"
+        "portifolioPane"
+        "rodape";
 }
+
+/* Adiciona um estilo básico para as seções */
+section {
+    display: flex;
+    align-items: center;
+}
+
 
 
 /* Estilo do cabeçalho */
@@ -41,242 +48,68 @@ header {
     border-bottom: none;
 }
 
-/* Adicionando uma linha horizontal após o cabeçalho */
-header::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80rem;
-    height: 1px;
-    background-color: black;
-}
-
-/* Estilo da área de avaliações (reviews) */
-#reviewsPane {
-    grid-area: reviewsPane;
-    align-self: center;
-    justify-self: center;
-    min-height: 300px;
-    margin: 5em;
-}
-
-/* Estilo dos cards de avaliação (reviewCards) */
-.reviewCards {
+#portifolioPane {
+    grid-area: portifolioPane;
     display: flex;
-    gap: 5em;
-    height: 500px;
+    justify-self: center;
+    margin-top: 1em;
+    border-style: solid;
+    border-color: transparent;
+    box-shadow:
+        5px 5px #fc6a5a, -5px -5px #333333
+}
+
+#portifolioContainer {
+    display: flex;
+    gap: 2em;
+}
+
+#portifolioContainer a {
+    text-decoration: none;
     width: 100%;
 }
 
-/* Estilo dos cards individuais (card1, card2, card3) */
-#card1,
-#card2,
-#card3 {
-    flex: 1;
-    text-align: left;
+#portifolioContainer div:hover {
+    transition: all .2s ease-in-out;
+    transform: scale(1.1);
+}
+
+.portifolioContentContainer {
     display: flex;
     flex-direction: column;
-    position: relative;
-    padding: 2em;
-}
-
-#card1 {
-    background-color: #fa4729;
-    color: white;
-    justify-content: flex-start;
-}
-
-#card2 {
-    justify-content: flex-end;
-    color: white;
-    background-image: url(../images/fotoLaranjas.jpg);
-}
-
-#card2::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
-}
-
-#card3 {
-    justify-content: flex-end;
-    color: white;
-    background-image: url(../images/fotoMaquinaEscrever.jpg);
-}
-
-#card3::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
-}
-
-#card1 a {
-    text-decoration: none;
-    color: white;
-    margin-top: auto;
-}
-
-#card2 h5,
-#card2 h2,
-#card3 h5,
-#card3 h2 {
-    position: relative;
-}
-
-/* Estilo do rodapé (footer) */
-footer {
-    display: flex;
-    grid-area: rodape;
-    background-color: var(--footer-background);
-    color: var(--footer-text);
-    padding: 2em;
-    flex-direction: column;
-}
-
-
-/* Estilo da parte superior do footer */
-#topFooter {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-}
-
-
-/* Estilo do lado esquerdo do footer */
-#leftFoot {
-    max-width: 300px;
-    /* Ajuste conforme necessário */
-}
-
-/* Estilo do lado esquerdo do footer */
-#leftFoot h4 {
-    color: var(--footer-link);
-    font-size: 1.2em;
-    margin-bottom: 1em;
-}
-
-#leftFoot h3 {
-    font-size: 1.5em;
-}
-
-#leftFoot a {
-    color: var(--footer-link);
-    text-decoration: none;
-}
-
-/* Estilo da parte do meio do footer */
-#middleFoot ul {
-    list-style: none;
-}
-
-/* Estilo da parte do meio do footer */
-#middleFoot h4 {
-    color: var(--footer-link);
-    font-size: 1.2em;
-    margin-bottom: 1em;
-}
-
-#middleFoot li {
-    margin-bottom: 1em;
-}
-
-#middleFoot a {
-    color: white;
-    text-decoration: none;
-}
-
-#middleFoot a:hover {
-    text-decoration: underline;
-}
-
-/* Estilo do lado direito do footer */
-#rightFoot ul {
-    list-style: none;
-}
-
-/* Estilo do lado direito do footer */
-#rightFoot h4 {
-    color: var(--footer-link);
-    font-size: 1.2em;
-    margin-bottom: 1em;
-}
-
-#rightFoot address {
-    color: white;
-    font-size: 0.9em;
-}
-
-#rightFoot h3 {
-    font-size: 1.2em;
-    color: #fc6a5a;
-    margin-top: 0.5em;
-}
-
-/* Adicionando ícone de e-mail ao lado do link 'hello' */
-#rightFoot h3::before {
-    content: '\2709';
-    margin-right: 0.2em;
-}
-
-/* Adicionando ícone de e-mail ao lado do link 'hello' */
-#rightFoot h3::before {
-    content: '\2709';
-    /* Código Unicode para o ícone de e-mail */
-    margin-right: 0.2em;
-}
-
-
-#rightFoot li {
-    margin-bottom: 0.5em;
-}
-
-#rightFoot a {
-    color: white;
-    text-decoration: none;
-}
-
-#rightFoot a:hover {
-    text-decoration: underline;
-}
-
-
-/* Estilo da parte inferior do footer */
-#bottomFooter {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-top: 2em;
+    justify-content: flex-start;
+    width: 200px;
+    height: 200px;
 }
 
-#bottomFooter img {
-    width: 50px;
-    /* Ajuste conforme necessário */
+.portifolioContentContainer h3 {
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
 }
 
-
-/* Estilo da parte inferior do footer */
-#bottomFooter h6 {
-    color: var(--footer-link);
-    font-size: 0.8em;
-    margin: 0;
+#firstSite {
+    background-image: url(../images/perfilLinkedinDarkCopy.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
+#secondSite {
+    background-color: yellow;
+}
 
+#thirdSite {
+    background-color: orange;
+}
+
+#forthSite {
+    background-color: khaki;
+}
 
 /* Links dos parceiros */
 .partnersLinks {
     display: flex;
-    gap: 8em;
     justify-content: center;
     align-items: center;
 }
@@ -284,7 +117,6 @@ footer {
 /* Estilo dos ícones das redes sociais no rodapé */
 .partnersLinks i {
     font-size: 1.5em;
-    margin-right: 0.5em;
 }
 
 /* Estilo dos links de parceiros no rodapé */
@@ -324,4 +156,191 @@ footer {
 .partnersLinks button:hover #github {
     color: #6e5494;
     /* Cor do GitHub */
+}
+
+/* Estilo do footer */
+footer {
+    display: flex;
+    grid-area: rodape;
+    background-color: var(--footer-background);
+    color: var(--footer-text);
+    max-width: 100%;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 2em;
+}
+
+
+/* Estilo da parte superior do footer */
+#topFooter {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+
+/* Estilo do lado esquerdo do footer */
+#leftFoot {
+    max-width: 300px;
+    /* Ajuste conforme necessário */
+}
+
+/* Estilo do lado esquerdo do footer */
+#leftFoot h4 {
+    color: var(--footer-link);
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+#leftFoot h3 {
+    font-size: 1.5em;
+}
+
+#leftFoot a {
+    color: var(--footer-link);
+    text-decoration: none;
+}
+
+/* Estilo da parte do meio do footer */
+#middleFoot ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilo da parte do meio do footer */
+#middleFoot h4 {
+    color: var(--footer-link);
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+#middleFoot li {
+    margin-bottom: 0.5em;
+}
+
+#middleFoot a {
+    color: white;
+    text-decoration: none;
+}
+
+#middleFoot a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo do lado direito do footer */
+#rightFoot ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilo do lado direito do footer */
+#rightFoot h4 {
+    color: var(--footer-link);
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+#rightFoot address {
+    color: white;
+    font-size: 0.9em;
+}
+
+#rightFoot h3 {
+    font-size: 1.2em;
+    color: #fc6a5a;
+    margin-top: 0.5em;
+}
+
+/* Adicionando ícone de e-mail ao lado do email */
+#rightFoot h3::before {
+    content: '\2709';
+    margin-right: 0.2em;
+}
+
+#rightFoot li {
+    margin-bottom: 0.5em;
+}
+
+#rightFoot a {
+    color: white;
+    text-decoration: none;
+}
+
+#rightFoot a:hover {
+    text-decoration: underline;
+}
+
+
+#bottomFooter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2em;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+#bottomFooter button {
+    margin-bottom: 0.5em;
+}
+
+
+#bottomFooter h6 {
+    color: var(--footer-link);
+    font-size: 0.8em;
+}
+
+/* Para smartphones */
+@media only screen and (max-width: 480px) {
+    main {
+        grid-template-rows: auto;
+        grid-template-areas:
+            "rodape";
+    }
+
+    header {
+        display: none;
+    }
+
+    footer {
+        width: auto;
+        margin-top: 35em;
+    }
+
+    #topFooter {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #leftFoot,
+    #middleFoot,
+    #rightFoot {
+        text-align: center;
+    }
+
+    #bottomFooter {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Para tablets e dispositivos maiores */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "cabecalho"
+
+            "rodape";
+    }
+
+    header {
+        display: flex;
+    }
+
+    footer {
+        padding: 2em;
+    }
 }
