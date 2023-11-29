@@ -56,7 +56,8 @@ header {
     border-style: solid;
     border-color: transparent;
     box-shadow:
-        5px 5px #fc6a5a, -5px -5px #333333
+        5px 5px #333333, -5px -5px #fc6a5a,
+        10px 10px #fc6a5a, -10px -10px #333333
 }
 
 #portifolioContainer {
@@ -96,15 +97,9 @@ header {
 }
 
 #secondSite {
-    background-color: yellow;
-}
-
-#thirdSite {
-    background-color: orange;
-}
-
-#forthSite {
-    background-color: khaki;
+    background-image: url(../images/perfilGitHubDarkCopy.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* Links dos parceiros */
@@ -296,16 +291,21 @@ footer {
     main {
         grid-template-rows: auto;
         grid-template-areas:
+            "portifolioPane"
             "rodape";
+        background-color: var(--primary-color);
     }
 
     header {
         display: none;
     }
 
+    #portifolioContainer {
+        flex-direction: column;
+    }
+
     footer {
         width: auto;
-        margin-top: 35em;
     }
 
     #topFooter {
