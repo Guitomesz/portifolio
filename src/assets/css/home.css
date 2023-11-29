@@ -179,7 +179,7 @@ header {
 }
 
 #secondPaneRight hr {
-    width: 100%;
+    width: 99%;
     border: 1px solid black;
 }
 
@@ -615,17 +615,16 @@ footer {
     background-color: var(--footer-background);
     color: var(--footer-text);
     max-width: 100%;
-    padding: 2em;
+    margin: 0;
     flex-direction: column;
     width: 100%;
-    margin-top: 2em;
 }
 
 
 /* Estilo da parte superior do footer */
 #topFooter {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
 }
 
@@ -733,7 +732,7 @@ footer {
 /* Estilo da parte inferior do footer */
 #bottomFooter {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin-top: 2em;
     flex-wrap: wrap;
@@ -819,7 +818,6 @@ footer {
 
     #secondPaneRight {
         flex-direction: column;
-        gap: 0;
     }
 
     .servicesContent {
@@ -841,7 +839,6 @@ footer {
     #approachPane {
         padding: 0.5em;
         /* Reduz o espaçamento interno */
-        width: auto;
     }
 
     /* Estilo dos itens de abordagem */
