@@ -209,29 +209,46 @@ header {
 #latestPane {
     grid-area: latestPane;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
-#latestControl {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    /* Adicionado para separar os elementos */
-}
-
-/* Links de controle da área "latest" */
-#latestLinksControl {
-    display: flex;
-    gap: 2em;
-    align-items: center;
-}
-
-#latestControl button {
+#latestPane button {
     background-color: transparent;
     color: #b3b3b3;
     border: 1px solid #bbbbbb;
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+
+#latestPane button:hover {
+    background-color: rgb(246, 144, 126);
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+#latestPane button:active {
+    background-color: var(--primary-color);
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+/* Links de controle da área "latest" */
+#latestLinksControl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    margin-bottom: 2em;
+}
+
+#scrollBtnsGallery {
+    display: flex;
+    gap: 1em;
+    margin-left: 2em;
+    align-items: center;
+    justify-self: center;
+    /* Alterado para column */
 }
 
 #latestControl h2 {
@@ -244,17 +261,6 @@ header {
     cursor: pointer;
 }
 
-#latestControl button:hover {
-    background-color: rgb(246, 144, 126);
-    color: white;
-    transition: background-color 0.3s ease;
-}
-
-#latestControl button:active {
-    background-color: var(--primary-color);
-    color: white;
-    transition: background-color 0.3s ease;
-}
 
 /* Estilo da área "approach" */
 #approachPane {
@@ -817,10 +823,14 @@ footer {
         /* ou qualquer valor desejado */
     }
 
-    /* Ajustes para a área "latest" */
+    /* Estilo da área "latest" */
     #latestPane {
-        margin: 0 3em 0 0;
-        /* Reduz o espaçamento interno */
+        display: flex;
+    }
+
+    #latestBtns {
+        flex-direction: row;
+        /* Alterado para row */
     }
 
     /* Ajustes para a área "approach" */
@@ -847,8 +857,6 @@ footer {
     .approachesItem hr:first-child {
         display: none;
     }
-
-
 
     /* Ajustes para a área "partners" */
     #partnersPane {
